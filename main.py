@@ -5,9 +5,10 @@ import requests
 #Setting up Flask
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def login():
-    
+    #I am creating a user object which will be used to login to the site.
+    user = User_Database()
     return render_template('login.html', title='Login Page')
 
 #This line will actually run the app.

@@ -5,6 +5,12 @@
 <div id='background_image'>
     <div class='login_container'>
         <h1>Welcome to the News App</h1>
+        <form class='login_form' onsubmit='return validateForm();' method="post">
+            <p>Username:<input type=text name=username>
+            <p>password: <input type=password name=password /></p>
+            <p><input type=submit value=Login>
+            <button><a href='/sign_up'>Sign Up</a></button></p>
+        </form>
     <div>
 </div>
 
