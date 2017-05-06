@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+
+<div id='background_image'>
+    <div class='login_container'>
+        <h1>Welcome to the News App</h1>
+        {% for message in get_flashed_messages() %}
+            <h1>{{ message }}</h1>
+        {% endfor %}
+        <p class='center'>Sign Up Page</p>
+        <form class='login_form' onsubmit='return validateForm();' method="post">
+            <p>Username: <input type=text name=username placeholder="Username">
+            <p>Password: <input type=password name=password placeholder="Password" /></p>
+            <p>Password: <input type=password name=second_password placeholder="Password Check" /></p>
+            <p><input type=submit value=Sign_Up>
+        </form>
+    <div>
+</div>
+
+{% endblock %}

@@ -1,4 +1,10 @@
-/* CSS for Login Page */
+/* Generic CSS */
+
+.center {
+    text-align: center;
+}
+
+/* CSS for Login Page and Sign Up pages */
 
 #background_image {
   background: url(https://source.unsplash.com/wajusTqz_FI);

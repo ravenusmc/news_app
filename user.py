@@ -23,17 +23,24 @@ class User():
 
     #This method will add a new member to the database.
     def add(self, username, password):
-        self.db.members.insert_one({
+        self.db.users.insert_one({
             "username": username,
             "password": password
         })
 
-    #This method will see if the user is actual member of the site.
+    #This method will find the user within the database
+    def find_specific_gt(self, tp):
+        bathroom_levels = self.db.paper.find({
+            "tp": {"$gt": tp }
+        })
+        return bathroom_levels
+
+    #This method will see if the user is actual user of the site.
     def check(self, username, password):
         #I first encode the password to utf-8
         password = password.encode('utf-8')
         #I then search for a user that matches the username
-        user = self.db.members.find_one({
+        user = self.db.users.find_one({
             "username": username
         });
         #If user is not found then flag is set to False
@@ -47,22 +54,9 @@ class User():
             if bcrypt.hashpw(password, hashed) == hashed:
                 #I don't believe I need this user real. I only need to return
                 #the flag.
-                user_real = self.db.members.find_one({
+                user_real = self.db.users.find_one({
                     "username": username,
                     "password": password
                 });
                 flag = True
         return flag
-
-
-
-# class Test():
-#
-#     def __init__(self, username):
-#         self.__username = username
-#
-#     def greet(self):
-#         print('Hello', self.__username)
-#
-# test = Test('Raven')
-# test.greet()
