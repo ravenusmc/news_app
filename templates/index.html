@@ -17,7 +17,24 @@
     </nav>
 
     <main>
-        <h1>General Section</h1>
+        <h1 class='center'>General Section</h1>
+        <div class='top_level_column'>
+
+            {% for article in articles %}
+            <div class='news_area'>
+                <div>
+                    <img class='image_size' src="{{ article['urlToImage'] }}">
+                </div>
+                <div>
+                    <p>{{ article['description'] }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+            <hr>
+
+
+        </div>
     </main>
 
 {% endblock %}

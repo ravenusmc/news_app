@@ -58,3 +58,18 @@ header h1 {
 header p {
     text-transform: uppercase;
 }
+
+.top_level_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.news_area {
+    display: flex;
+    flex-direction: row;
+}
+
+.image_size {
+    width: 200px;
+    height: 200px;
+}

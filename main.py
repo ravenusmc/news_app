@@ -55,7 +55,12 @@ def index():
     if 'username' not in session:
         return redirect(url_for('login'))
     name = session['username']
-    return render_template('index.html', title='Home Page', username = name)
+    url = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=61d27504cb064eaf912be90e31803d5d"
+    r = requests.get(url)
+    response_dict = r.json()
+    articles = response_dict['articles']
+    length = len(response_dict['articles'])
+    return render_template('index.html', title='Home Page', username = name, articles = articles)
 
 @app.route('/no_match', methods=['GET', 'POST'])
 def no_match():
@@ -68,13 +73,6 @@ app.secret_key = 'n3A\xef(\xb0Cf^\xda\xf7\x97\xb1x\x8e\x94\xd5r\xe0\x11\x88\x1b\
 if __name__ == '__main__':
     app.run(debug=True)
 
-
-
-# url = "https://newsapi.org/v1/articles?source=techcrunch&apiKey=61d27504cb064eaf912be90e31803d5d"
-# r = requests.get(url)
-# response_dict = r.json()
 # image = response_dict['articles'][0]['urlToImage']
 # news_title = response_dict['articles'][0]['title']
 # url = response_dict['articles'][0]['url']
-# print(image)
-# name = "Mike Hope"
