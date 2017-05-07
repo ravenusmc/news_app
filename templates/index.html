@@ -20,18 +20,19 @@
         <h1 class='center'>General Section</h1>
         <div class='top_level_column'>
 
+            <!-- This news area is what will contain each news article -->
             {% for article in articles %}
             <div class='news_area'>
                 <div>
-                    <img class='image_size' src="{{ article['urlToImage'] }}">
+                    <a href="{{ article['url'] }}"><img class='image_size' src="{{ article['urlToImage'] }}"></a>
                 </div>
-                <div>
+                <div class='article_info_area'>
+                    <h1><a href="{{ article['url'] }}">{{ article['title'] }}</a></h1>
                     <p>{{ article['description'] }}</p>
                 </div>
             </div>
-            {% endfor %}
-
             <hr>
+            {% endfor %}
 
 
         </div>

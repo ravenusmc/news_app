@@ -25,6 +25,20 @@ nav ul li a {
     color: black;
 }
 
+footer {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #0858d8;
+  border-radius: 5px;
+}
+
+hr {
+    height: 2px;
+    width: 800px;
+    background-color: black;
+}
+
 /* CSS for Login Page and Sign Up pages */
 
 #background_image {
@@ -62,6 +76,9 @@ header p {
 .top_level_column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .news_area {
@@ -70,6 +87,31 @@ header p {
 }
 
 .image_size {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 170px;
+}
+
+.article_info_area {
+    margin-left: 3%;
+}
+
+/* CSS for Media Queries */
+@media only all and (max-width: 768px){
+
+    .news_area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    hr {
+        height: 2px;
+        width: 150px;
+        background-color: black;
+    }
+
+    .image_size {
+        width: 250px;
+        height: 141px;
+    }
+
 }
