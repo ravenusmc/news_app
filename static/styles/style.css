@@ -4,6 +4,27 @@
     text-align: center;
 }
 
+nav {
+    background-color: #0858d8;
+    border-radius: 5px;
+}
+
+nav ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
 /* CSS for Login Page and Sign Up pages */
 
 #background_image {
@@ -27,4 +48,13 @@
 
 .login_form {
     text-align: center;
+}
+
+/* CSS for Index page */
+header h1 {
+    text-transform: uppercase;
+}
+
+header p {
+    text-transform: uppercase;
 }

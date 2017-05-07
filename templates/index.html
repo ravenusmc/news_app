@@ -3,17 +3,21 @@
 {% block body %}
 
     <header>
-        <h1 class='center'>Welcome {{ username }} to MC's News App</h1>
-        <p>Finding the news you want in one location</p>
+        <h1 class='center'>Welcome {{ username }}, to the News App!</h1>
+        <p class='center'>Finding the news you want in one location</p>
     </header>
 
     <nav>
         <ul>
-            <li>General</li>
-            <li>Business</li>
-            <li>Technology</li>
+            <li><a href="/index">General</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>Business</li>&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>Technology</li>&nbsp;&nbsp;&nbsp;&nbsp;
             <li>Video Games</li>
         </ul>
     </nav>
+
+    <main>
+        <h1>General Section</h1>
+    </main>
 
 {% endblock %}
