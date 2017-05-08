@@ -67,6 +67,32 @@ def index():
     return render_template('index.html', title='Home Page', username = name, articles = articles)
 
 #This function brings the user to the business page.
+@app.route('/business')
+def business():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    #Getting the username to use on the site.
+    name = session['username']
+    #Pulling the news articles from the API and saving it in a variable named url.
+    url = "https://newsapi.org/v1/articles?source=business-insider&sortBy=top&apiKey=61d27504cb064eaf912be90e31803d5d"
+    r = requests.get(url)
+    response_dict = r.json()
+    articles = response_dict['articles']
+    return render_template('business.html', title='Business Page', username = name, articles = articles)
+
+#This function brings the user to the business page.
+@app.route('/tech')
+def tech():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    #Getting the username to use on the site.
+    name = session['username']
+    #Pulling the news articles from the API and saving it in a variable named url.
+    url = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=61d27504cb064eaf912be90e31803d5d"
+    r = requests.get(url)
+    response_dict = r.json()
+    articles = response_dict['articles']
+    return render_template('tech.html', title='Tech Page', username = name, articles = articles)
 
 #This function will display the news articles that deal with video game news.
 @app.route('/games')
@@ -79,7 +105,7 @@ def games():
     r = requests.get(url)
     response_dict = r.json()
     articles = response_dict['articles']
-    return render_template('game.html', title='Home Page', username = name, articles = articles)
+    return render_template('game.html', title='Game Page', username = name, articles = articles)
 
 # set the secret key. keep this really secret:
 app.secret_key = 'n3A\xef(\xb0Cf^\xda\xf7\x97\xb1x\x8e\x94\xd5r\xe0\x11\x88\x1b\xb9'
