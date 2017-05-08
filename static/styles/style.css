@@ -2,6 +2,7 @@
 
 .center {
     text-align: center;
+    color: #333;
 }
 
 nav {
@@ -22,7 +23,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: #333;
 }
 
 footer {
