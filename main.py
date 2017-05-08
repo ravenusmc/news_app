@@ -66,6 +66,8 @@ def index():
     articles = response_dict['articles']
     return render_template('index.html', title='Home Page', username = name, articles = articles)
 
+#This function brings the user to the business page.
+
 #This function will display the news articles that deal with video game news.
 @app.route('/games')
 def games():
@@ -73,7 +75,10 @@ def games():
     if 'username' not in session:
         return redirect(url_for('login'))
     name = session['username']
-    url = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=61d27504cb064eaf912be90e31803d5d"
+    url = "https://newsapi.org/v1/articles?source=ign&sortBy=latest&apiKey=61d27504cb064eaf912be90e31803d5d"
+    r = requests.get(url)
+    response_dict = r.json()
+    articles = response_dict['articles']
     return render_template('game.html', title='Home Page', username = name, articles = articles)
 
 # set the secret key. keep this really secret:
