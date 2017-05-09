@@ -5,6 +5,16 @@
     color: #333;
 }
 
+.nav_header_container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    /*background: linear-gradient(to bottom, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);*/
+    
+}
+
 nav {
     background-color: #0858d8;
     border-radius: 5px;
@@ -24,6 +34,10 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
+}
+
+main {
+    margin-top: 250px;
 }
 
 footer {
@@ -98,6 +112,11 @@ header p {
 
 /* CSS for Media Queries */
 @media only all and (max-width: 768px){
+
+    nav ul li {
+        display: block;
+        font-size: 25px;
+    }
 
     .news_area {
         display: flex;
