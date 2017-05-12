@@ -16,7 +16,7 @@ Flask, Python 3.4, Pandas, Mongo DB and Numpy must be installed on your computer
 3. Pandas
 4. Numpy
 5. Mongo DB
-6. React
+
 
 ### Operation
 
@@ -25,7 +25,7 @@ Then follow the address, which your console/terminal tells you to go to see the
 website.
 
 # Issues
-
+None 
 
 # Preview
 
