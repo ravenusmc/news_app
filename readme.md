@@ -3,7 +3,7 @@
 
 This project will be about using the News API to display news articles. As of
 this writing, I am not planning on this becoming anything that complex. I mainly
-want to play around with the News Api and see what I can with it. 
+want to play around with the News Api and see what I can with it.
 
 # Getting started
 ### Installing
@@ -29,6 +29,6 @@ website.
 
 # Preview
 
-To see a video that talks about this project please go here: Coming Soon
+To see a video that talks about this project please go here: https://youtu.be/3csvQETVKqA
 
-Blog entry: Coming Soon
+Blog entry: https://codingsaga.wordpress.com/2017/05/12/news-app-write-up/
